@@ -20,6 +20,9 @@ uniform mat4 textureMatrix;
 uniform mat4 modelViewProjectionMatrix;
 uniform mat4 normalMatrix;
 
+%custom_uniforms%
+
+%postVertex%
 
 void main (void){
     vec4 eyePosition = modelViewMatrix * position;
@@ -33,6 +36,6 @@ void main (void){
     #if HAS_COLOR
         v_color = color;
     #endif
-    gl_Position = modelViewProjectionMatrix * position;
+    gl_Position = modelViewProjectionMatrix * postVertex(position);
 }
 )";

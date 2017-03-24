@@ -106,6 +106,7 @@ public:
 		ofFloatColor specular{ 0.0f, 0.0f, 0.0f, 1.0f }; //< specular reflectance
 		ofFloatColor emissive{ 0.0f, 0.0f, 0.0f, 1.0f }; //< emitted light intensity
 		float shininess{ 0.2f }; //< specular exponent
+		std::string postVertex;
 		std::string postFragment;
 		std::string customUniforms;
 	};
